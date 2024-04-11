@@ -1,0 +1,171 @@
+h1 {
+    color: gray
+}
+
+.v-img {
+    float: left;
+}
+
+.m-img {
+    float: right;
+    width: 400px;
+    height: 300px;
+}
+
+.fit-img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1,
+h2,
+footer {
+    text-align: center;
+    list-style-position: inside;
+}
+
+.auto-center {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: Arial;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h2 {
+    font-size: larger;
+}
+
+p,
+table,
+li {
+    font-size: large;
+}
+
+
+/**--------------Innentől házi----------------**/
+
+body {
+    background-image: url("background1.jpg");
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+
+
+/**Alapjáraton is egyező betűtípus, de**/
+
+h1,
+h2 {
+    font-family: Arial;
+    background-color: aqua;
+}
+
+.navbar1 ul {
+    list-style-type: none;
+    background-color: hsl(0, 0%, 25%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar2 ul {
+    list-style-type: none;
+    background-color: hsl(0, 39%, 14%);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar1 a:hover {
+    background-color: hsl(0, 0%, 10%);
+}
+
+.navbar2 a:hover {
+    background-color: hsl(0, 18%, 19%);
+}
+
+.navbar1 a,
+.navbar2 a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar1 li,
+.navbar2 li {
+    float: left;
+}
+
+.same-deco {
+    /**legacy.html fileban használva**/
+    color: blue;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav div {
+    font-size: x-large;
+    border-radius: 25px;
+    border: 2px solid blue;
+    padding: 20px;
+}
+
+.url1:visited {
+    color: red;
+}
+
+.url1:hover {
+    color: green;
+}
+
+.url1:active {
+    color: blue;
+}
+
+.url2:visited {
+    color: aquamarine;
+}
+
+.url2:hover {
+    color: blueviolet;
+}
+
+.url2:active {
+    color: brown;
+}
+
+div.dotted-div {
+    border-style: dotted;
+    text-align: left;
+    padding-right: 50px;
+    border-bottom-color: blue;
+    border-left-color: cyan;
+    border-right-color: purple;
+    border-top-color: red;
+}
+
+th,
+td {
+    border: 1px solid;
+}
+
+tr:nth-child(even) td:nth-child(even),
+tr:nth-child(odd) td:nth-child(odd) {
+    background-color: red;
+    text-decoration: dotted;
+}
+
+tr:nth-child(odd) td:nth-child(even),
+tr:nth-child(even) td:nth-child(odd) {
+    background-color: purple;
+    text-decoration: dashed;
+}
