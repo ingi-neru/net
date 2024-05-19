@@ -4,7 +4,7 @@ import os.path
 import mimetypes
 shutdown_flag = False
 def handle_client(clientsocket):
-    clientsocket.settimeout(5)
+    #clientsocket.settimeout(5)
     global shutdown_flag
     keepalive = True
     while keepalive:
@@ -15,11 +15,11 @@ def handle_client(clientsocket):
                 path = '.' + chunks[1]
 
                 print('Process with id ' + str(threading.get_native_id()) + ' is requesting file ' + path)
-                data = ''
+                # data = ''
                 if os.path.isfile(path) or path == './':
                     data = 'HTTP/1.1 200 OK\r\n'
                     if path == './l2.py' or path == './':
-                        path = './index.html'
+                        path = './welcome.html'
                         if path == './':
                             data += 'Content-type: text/html\r\n'
                         else:
@@ -45,6 +45,7 @@ def handle_client(clientsocket):
                 if 'Connection: close' in message:
                     print('Shutting down connection with process: ' + str(threading.get_native_id()))
                     clientsocket.close()
+                    keepalive = False
         except KeyboardInterrupt:
             print('\nShutting down...')
             shutdown_flag = True
@@ -59,7 +60,7 @@ def webserver():
     serversocket = socket(AF_INET, SOCK_STREAM)
     serversocket.bind(('', 8080))
     serversocket.listen(5)
-    serversocket.settimeout(5)
+    #serversocket.settimeout(5)
     print('Server is now running on port 8080')
     while not shutdown_flag:
         try:
